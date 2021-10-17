@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './components/profile.component';
-import { RepoComponent } from './repo/repo.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { RepoComponent } from './components/repo/repo.component';
 
 
 const routes: Routes = [
@@ -22,4 +22,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class LucyRoutingModule { }
+export class RoutingModule { }

@@ -1,51 +1,58 @@
-# GithubSearch
-This is an angular application that enables one to search a github user and their credentials like; Avatar, repositories, public gists, email and view the profile on github.
+## Github Search Website
 
-## Author.
-**Mburiah Betty**
- - *Project* - Live link at: https://Wambuilucy.github.io/Github-Search/
+This is a site that enables users to search for github users and repositories 17/10/2021.
 
-## Requirements
-Web browser with an internet connection.
+By Khajira Christopher
 
-## BDD
-*  BDD stands for Behaviour-Driven Development.
+## Description
 
- | Input | Description| Output |
- |:---    | ---: | ---: |
- | text | user types text on the search form | github profile is automatically fetched |   
- | view profile on github | Click on the button | redirects to the person's github profile |
- | view repo | Click on the button below repo |  redirects to the particular repo on github |
+This is a site for users to be able to search for github users and repositories. The site is has two routes. In the landing page, the user is able to fill a username into a form and search. The result is the avatar linked to the username and the public repositories that have been uploaded by that user. Moreover, the description of the repository is provided. A user can also search for repositories on the repositories page through a form. From the request, the user is able to get a list of repositories, their descriptions and ID.   
 
-## Technologies used.
-* Angular 8
-* Typescript
-* Github Api OAuth app (tokens)
-* HTML, CSS and Javascript.
-* Bootstrap
+## Features Summary
 
-## Development server
+Below is a brief summary of the features that the website provides:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Input the github username though a form in the landing page
+- The request provides user profile and avatar 
+- The request also provides a list of the repositories attached to the username and their descriptions
+- A user can also search for repositories by filling the form in the repositories page
+- This request provides the repositories and their descriptions
 
-## Code scaffolding
+## Setup/Installation Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the project using git clone https://github.com/Ckhajira/quotes-app. If you are not able to clone it, you can download the files as a zip folder
 
-## Build
+2. Ensure that you have the complete file
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. Navigate to the index.html file which is in the root file of the folder.
 
-## Running unit tests
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Technologies Used
 
-## Further help
+This project uses HTML, CSS, Bootstrap and Angular.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Dependencies
+@schematics/angular             11.2.14
+@schematics/update              0.1102.14
+rxjs                            6.6.7
+typescript                      4.1.6
+Angular CLI: 11.2.14
+Node: 16.10.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19
+## Support and contact details
+
+If you have any issues or questions, you can get intouch with me through email: christopher.khajira@student.moringaschool.com. Please feel free to make any contributions to the code.
+
+## License
+
+MIT License
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Copyright (c) 2021 Khajira Christopher

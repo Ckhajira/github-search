@@ -7,10 +7,10 @@ import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './components/profile.component';
-import { LucyRoutingModule } from './lucy-routing.module';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RepoComponent } from './repo/repo.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { RoutingModule } from './routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RepoComponent } from './components/repo/repo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { RepoComponent } from './repo/repo.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    LucyRoutingModule,
+    RoutingModule,
     CommonModule
   ],
   providers: [ProfileService],
