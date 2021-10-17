@@ -8,27 +8,27 @@ import { ProfileService } from '../services/profile.service';
 })
 export class RepoComponent implements OnInit {
 
-  repos:any;
-  searchname:any;
+  repos: any;
+  searchname: any;
 
-  constructor(private profileService:ProfileService) {
+  constructor(private profileService: ProfileService) {
     this.profileService = profileService;
 
-   }
+  }
 
-   searchRepos(){
-     this.profileService.updateRepoSearchName(this.searchname);
-     this.profileService.searchRepos().then(replies=>{
+  searchRepos() {
+    this.profileService.updateRepoSearchName(this.searchname);
+    this.profileService.searchRepos().then(replies => {
       this.repos = replies['items'];
       console.log(this.repos)
     });
 
-   }
+  }
 
-  
+
 
   ngOnInit() {
-    this.profileService.searchRepos().then(replies=>{
+    this.profileService.searchRepos().then(replies => {
       this.repos = replies['items'];
       console.log(this.repos)
     });

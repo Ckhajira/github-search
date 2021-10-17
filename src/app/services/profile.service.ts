@@ -10,7 +10,7 @@ export class ProfileService {
   user: User
   repos:any;
   username = 'Wambuilucy';
-  searchname = "tetris";
+  searchname = "book";
 
   constructor(private http: HttpClient) { 
     this.user = new User('',0,'');
