@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 
+
 @Component({
   selector: 'app-repo',
   templateUrl: './repo.component.html',
@@ -10,6 +11,7 @@ export class RepoComponent implements OnInit {
 
   repos: any;
   searchname: any;
+  username: any;
 
   constructor(private profileService: ProfileService) {
     this.profileService = profileService;
@@ -17,13 +19,16 @@ export class RepoComponent implements OnInit {
   }
 
   searchRepos() {
+   
     this.profileService.updateRepoSearchName(this.searchname);
+    
     this.profileService.searchRepos().then(replies => {
       this.repos = replies['items'];
       console.log(this.repos)
     });
 
   }
+ 
 
 
 
