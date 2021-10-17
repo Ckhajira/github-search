@@ -12,6 +12,7 @@ import { RoutingModule } from './routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RepoComponent } from './components/repo/repo.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { CardHoverDirective } from './directives/card-hover.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     ProfileComponent,
     NavbarComponent,
     RepoComponent,
-    DateAgoPipe
+    DateAgoPipe,
+    CardHoverDirective
 
   ],
   imports: [

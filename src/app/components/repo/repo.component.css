@@ -7,8 +7,17 @@
 }
 
 p{
-    color: skyblue;
+   
     font-weight: 400;
     font-size: 14px;
 }
-
+form{
+    
+    margin-bottom: 3rem;
+    
+}
+input{
+    width: 20vw;
+    height: 5.5vh;
+   
+}

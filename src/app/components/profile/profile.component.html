@@ -25,61 +25,26 @@
     <div class="row" style="margin-top: 100px;">
       <div class="col-md-6">
         <h2 style="position: fixed; left: 100px;"> User</h2>
+
         <div class="profile-details ml-5" style="position: fixed;">
           <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
           <div class="prof-details">
             <p class="login">Username: {{profile.login}}</p>
-            
+
           </div>
         </div>
       </div>
       <div class="col-md-5">
         <h2 class="text-success">{{profile.login}} Repositories</h2>
         <div class="" *ngFor="let repo of repos ">
-          <div class="card-body">
-            <h3 class="card-title">{{repo.name}}</h3>
-            <p class="card-text">{{repo.description}}</p>
-            <p class='pipe'>Created on :{{repo.created_at|dateAgo}}</p>
-            <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Check in Github </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div *ngIf='profile'>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row">
-          <div class="-5">
-            <img src="{{profile.avatar_url}}" alt="Profile Image">
-            <p class="login">{{profile.login}}</p>
-
-          </div>
-          <div class="col-sm-5">
-
-
-          </div>
-          <!-- <div class="col-sm-4"> -->
-
-
-          <div class="">
-            <div>
-              <h3><u>Repos</u></h3>
-            </div>
-            <div class="" *ngFor="let repo of repos ">
-              <div class="card text-white bg-dark m-3">
-
-                <p class="card-header ppp" style="color:white">
-                  {{repo.name}}<br><a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-info">View
-                    repo on github</a>
-                </p>
-                <p class="card-body pp p-3"> {{repo.description}}</p>
-                <p class='pipe'>Created on :{{repo.created_at|date}}</p>
-              </div>
+          <div appCardHover class="card">
+            <div appCardHover class="card-body">
+              <h3 class="card-title">{{repo.name}}</h3>
+              <p class="card-text">{{repo.description}}</p>
+              <p class='pipe'>Created: {{repo.created_at|dateAgo}}</p>
+              <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Check in Github </a>
             </div>
           </div>
-          <!-- </div> -->
         </div>
       </div>
     </div>
