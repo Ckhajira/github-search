@@ -1,28 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../user';
+import {User} from  '../user';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  user: User;
-  repos: any;
-  username = 'Ckhajira';
-  searchname = "tetris"
+  user: User
+  repos:any;
+  username = 'Wambuilucy';
+  searchname = "tetris";
 
-  constructor(private http: HttpClient) {
-    this.user = new User('', 0, '');
+  constructor(private http: HttpClient) { 
+    this.user = new User('',0,'');
     this.http = http;
+    
   }
 
-  getUsers() {
-    interface ApiResponse {
-      login: string;
-      id: number;
-      avatar_url: string;
+  getUsers(){
+    interface ApiResponse{
+      login:string;
+      id:number;
+      avatar_url:string;
     }
-
     let  promise = new Promise((resolve, reject)=>{
       return this.http.get<ApiResponse>('https://api.github.com/users/' + this.username).toPromise().then(response=>{
         this.user.login = response.login

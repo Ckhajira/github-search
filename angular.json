@@ -1,18 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "3ab12b48-7647-4c35-b802-b288e95340e4"
+    "analytics": "004f25de-d827-4310-8faa-69d644254f60"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gh-search": {
+    "git-search": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gh-search",
+            "outputPath": "dist/git-search",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -46,20 +42,22 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -68,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gh-search:build"
+            "browserTarget": "git-search:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gh-search:build:production"
+              "browserTarget": "git-search:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gh-search:build"
+            "browserTarget": "git-search:build"
           }
         },
         "test": {
@@ -116,16 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "gh-search:serve"
+            "devServerTarget": "git-search:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "gh-search:serve:production"
+              "devServerTarget": "git-search:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "gh-search"
+    }},
+  "defaultProject": "git-search"
 }
