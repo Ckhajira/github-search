@@ -11,6 +11,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RoutingModule } from './routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RepoComponent } from './components/repo/repo.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RepoComponent } from './components/repo/repo.component';
     ProfileComponent,
     NavbarComponent,
     RepoComponent,
+    DateAgoPipe
 
   ],
   imports: [
@@ -26,7 +28,8 @@ import { RepoComponent } from './components/repo/repo.component';
     AppRoutingModule,
     FormsModule,
     RoutingModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
