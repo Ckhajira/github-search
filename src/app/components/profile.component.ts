@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   username: string;
 
   constructor( private profileService: ProfileService) {
-    this.username = "Wambuilucy";
+    this.username = "Ckhajira";
   }
 
   findProfile() {

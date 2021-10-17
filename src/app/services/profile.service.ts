@@ -9,7 +9,7 @@ import {User} from  '../user';
 export class ProfileService {
   user: User
   repos:any;
-  username = 'Wambuilucy';
+  username = 'Ckhajira';
   searchname = "book";
 
   constructor(private http: HttpClient) { 
@@ -49,7 +49,8 @@ export class ProfileService {
 
     let promise = new Promise((resolve, reject)=>{
       return this.http.get("https://api.github.com/users/"+this.username+"/repos").toPromise().then(reply=>{
-        reply
+        
+      reply
         resolve(reply)
       },
       error=>{
