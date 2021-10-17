@@ -6,7 +6,7 @@ By Khajira Christopher
 
 ## Description
 
-This is a site for users to be able to search for github users and repositories. The site is has two routes. In the landing page, the user is able to fill a username into a form and search. The result is the avatar linked to the username and the public repositories that have been uploaded by that user. Moreover, the description of the repository is provided. A user can also search for repositories on the repositories page through a form. From the request, the user is able to get a list of repositories, their descriptions and ID.   
+This is a site for users to be able to search for github users and repositories. The website is able to obtain this data through API requests. The site is has two routes. In the landing page, the user is able to fill a username into a form and search. The result is the avatar linked to the username and the public repositories that have been uploaded by that user. Moreover, the description of the repository is provided. A user can also search for repositories on the repositories page through a form. From the request, the user is able to get a list of repositories, their descriptions and ID.   
 
 ## Features Summary
 
